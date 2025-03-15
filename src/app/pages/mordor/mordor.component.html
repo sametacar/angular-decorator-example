@@ -1,0 +1,27 @@
+<div class="mordor-page">
+  <h2>Mordor</h2>
+
+  <p>
+    Mordor is a dark land located in the southeast of Middle-earth, ruled by the Dark Lord Sauron.
+    Surrounded by mountains on three sides, this land has a volcanic terrain. The active volcano called Orodruin (Mount
+    Doom)
+    is located here, and the One Ring was forged in the fires of this mountain. Barad-dûr is the most important fortress
+    of Mordor,
+    and Sauron's eye watches over Middle-earth from here.
+  </p>
+
+  <div class="form-group">
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" [(ngModel)]="capital" placeholder="What is the capital of Mordor?">
+  </div>
+
+  <div class="form-group">
+    <label for="character">Select Character:</label>
+    <select id="character" [(ngModel)]="selectedCharacter">
+      <option value="">Select...</option>
+      <option *ngFor="let character of characters" [value]="character">{{ character }}</option>
+    </select>
+  </div>
+
+  <app-character-display [character]="selectedCharacter"></app-character-display>
+</div>

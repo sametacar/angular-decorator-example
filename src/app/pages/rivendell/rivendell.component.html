@@ -1,0 +1,28 @@
+<div class="rivendell-page">
+  <h2>Rivendell</h2>
+
+  <p>
+    Rivendell (Imladris in Elvish) is an elven settlement located in the north of Middle-earth, at the foothills of the
+    Misty Mountains.
+    Founded by Elrond in the Second Age, this valley serves as both a sanctuary and a house of wisdom. The Fellowship of
+    the Ring was formed
+    here in The Lord of the Rings. Rivendell is famous for its healing powers, libraries, and works of art. Its
+    architecture is designed
+    in harmony with nature, surrounded by waterfalls and gardens.
+  </p>
+
+  <div class="form-group">
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" [(ngModel)]="capital" placeholder="What is the capital of Rivendell?">
+  </div>
+
+  <div class="form-group">
+    <label for="character">Select Character:</label>
+    <select id="character" [(ngModel)]="selectedCharacter">
+      <option value="">Select...</option>
+      <option *ngFor="let character of characters" [value]="character">{{ character }}</option>
+    </select>
+  </div>
+
+  <app-character-display [character]="selectedCharacter"></app-character-display>
+</div>

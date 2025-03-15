@@ -1,0 +1,25 @@
+<div class="gondor-page">
+  <h2>Gondor</h2>
+
+  <p>
+    Gondor is one of the most powerful kingdoms established by humans in the west of Middle-earth.
+    It was founded by exiles after the fall of Númenor. The White Tree is the symbol of the kingdom
+    and is located in the Court of the Fountain in Minas Tirith. In The Lord of the Rings, Gondor is
+    at the forefront of the struggle against Sauron and regains its former glory when Aragorn becomes king.
+  </p>
+
+  <div class="form-group">
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" [(ngModel)]="capital" placeholder="What is the capital of Gondor?">
+  </div>
+
+  <div class="form-group">
+    <label for="character">Select Character:</label>
+    <select id="character" [(ngModel)]="selectedCharacter">
+      <option value="">Select...</option>
+      <option *ngFor="let character of characters" [value]="character">{{ character }}</option>
+    </select>
+  </div>
+
+  <app-character-display [character]="selectedCharacter"></app-character-display>
+</div>

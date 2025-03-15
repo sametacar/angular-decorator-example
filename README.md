@@ -1,59 +1,84 @@
-# AngularDecoratorExample
+# Angular Decorator Example: Middle-earth Edition
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+This project demonstrates how to use Angular's traditional module-based architecture with non-standalone components. It specifically focuses on the @NgModule decorator and its metadata properties (declarations, imports, exports, providers, bootstrap).
 
-## Development server
+## Project Overview
 
-To start a local development server, run:
+The application is a simple guide to Middle-earth realms from The Lord of the Rings, organized into "Good Side" (Rivendell, Gondor, Rohan) and "Bad Side" (Mordor) sections. Each realm has its own page with information and interactive elements. The project structure showcases how to organize code using Angular's module system.
 
-```bash
-ng serve
+## Key Features
+
+- **@NgModule Metadata Focus**: Explores the declarations, imports, exports, providers, and bootstrap properties
+- **Modular Architecture**: Uses Angular's traditional NgModule system instead of the newer standalone components
+- **Feature Modules**: Separate modules for good and bad realms
+- **Shared Components**: Reusable components across different feature modules
+- **Custom Pipes**: Demonstrates how to create and use pipes in a modular architecture
+
+## Technical Concepts Demonstrated
+
+### @NgModule Class Metadata
+
+This project focuses specifically on the @NgModule decorator and its metadata properties:
+
+- **declarations**: Components, directives, and pipes that belong to this module
+- **imports**: Other modules whose exported components/directives/pipes are needed
+- **exports**: Components, directives, and pipes that can be used in other modules
+- **providers**: Services that the module contributes to the global collection of services
+- **bootstrap**: The main application view (root component)
+
+### Module Structure
+
+- **AppModule**: The root module that bootstraps the application
+- **GoodSidePagesModule**: Contains components for the good realms
+- **BadSidePagesModule**: Contains components for the bad realms
+- **ComponentsModule**: Contains shared components used across the application
+- **PipesModule**: Contains custom pipes used across the application
+
+## Why Non-Standalone Architecture?
+
+While Angular is moving towards standalone components, understanding the traditional module-based architecture is still important for:
+
+1. Maintaining existing Angular applications
+2. Working with enterprise applications that haven't migrated to standalone components
+3. Understanding Angular's dependency injection system at a deeper level
+4. Learning how Angular organizes and manages components, directives, and pipes
+
+## Getting Started
+
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `ng serve` to start the development server
+4. Navigate to `http://localhost:4200/`
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── components/               # Shared components
+│   │   └── character-display/    # Component for displaying character info
+│   ├── pages/                    # Feature pages
+│   │   ├── good-side-pages.module.ts
+│   │   ├── bad-side-pages.module.ts
+│   │   ├── gondor/
+│   │   ├── mordor/
+│   │   ├── rivendell/
+│   │   └── rohan/
+│   ├── pipes/                    # Custom pipes
+│   │   └── character-info.pipe.ts
+│   ├── app.component.ts          # Root component
+│   ├── app.module.ts             # Root module
+│   └── app-routing.module.ts     # Application routes
+└── ...
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Learning Resources
 
-## Code scaffolding
+If you want to learn more about Angular's module system and decorators, check out:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- [Angular Official Documentation on NgModules](https://angular.io/guide/ngmodules)
+- [Angular Architecture Best Practices](https://angular.io/guide/styleguide)
 
-```bash
-ng generate component component-name
-```
+## License
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project is licensed under the MIT License - see the LICENSE file for details.

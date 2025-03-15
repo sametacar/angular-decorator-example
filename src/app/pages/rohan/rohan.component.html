@@ -1,0 +1,26 @@
+<div class="rohan-page">
+  <h2>Rohan</h2>
+
+  <p>
+    Rohan is a kingdom located in the northwest of Middle-earth. It is ruled by the Rohirrim people, known as the "Horse
+    Lords".
+    Famous for its vast meadows and horse breeding culture. Its capital is Edoras, where the golden hall of Meduseld is
+    located.
+    In The Lord of the Rings, Rohan is one of Gondor's most important allies.
+  </p>
+
+  <div class="form-group">
+    <label for="capital">Capital:</label>
+    <input type="text" id="capital" [(ngModel)]="capital" placeholder="What is the capital of Rohan?">
+  </div>
+
+  <div class="form-group">
+    <label for="character">Select Character:</label>
+    <select id="character" [(ngModel)]="selectedCharacter">
+      <option value="">Select...</option>
+      <option *ngFor="let character of characters" [value]="character">{{ character }}</option>
+    </select>
+  </div>
+
+  <app-character-display [character]="selectedCharacter"></app-character-display>
+</div>
