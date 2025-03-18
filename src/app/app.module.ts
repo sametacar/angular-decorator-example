@@ -17,7 +17,6 @@ import { BadSidePagesModule } from './pages/bad-side-pages.module';
     GoodSidePagesModule,
     BadSidePagesModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

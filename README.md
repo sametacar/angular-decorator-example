@@ -1,6 +1,6 @@
 # Angular Decorator Example: Middle-earth Edition
 
-This project demonstrates how to use Angular's traditional module-based architecture with non-standalone components. It specifically focuses on the @NgModule decorator and its metadata properties (declarations, imports, exports, providers, bootstrap).
+This project demonstrates how to use Angular's traditional module-based architecture with non-standalone components. It specifically focuses on the @NgModule decorator and its metadata properties (declarations, imports, exports, providers, bootstrap). There is also a simple documentary blog post about this repo. You can read it here; https://medium.com/p/ce71fc1dc9b9
 
 ## Project Overview
 
